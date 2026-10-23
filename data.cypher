@@ -1,0 +1,138 @@
+CREATE CONSTRAINT UNIQUE_IMPORT_NAME FOR (node:`UNIQUE IMPORT LABEL`) REQUIRE (node.`UNIQUE IMPORT ID`) IS UNIQUE;
+UNWIND [{_id:10, properties:{genero:"MPB", nome:"Fagner"}}, {_id:11, properties:{genero:"MPB", nome:"Belchior"}}, {_id:12, properties:{genero:"Rock brasileiro", nome:"Legião Urbana"}}, {_id:13, properties:{genero:"Rock brasileiro", nome:"Engenheiros do Hawaii"}}, {_id:14, properties:{genero:"Rock progressivo", nome:"Pink Floyd"}}, {_id:15, properties:{genero:"Rock", nome:"The Beatles"}}, {_id:16, properties:{genero:"Rock alternativo", nome:"Radiohead"}}, {_id:17, properties:{genero:"Post-punk", nome:"The Cure"}}, {_id:18, properties:{genero:"Post-punk", nome:"Joy Division"}}, {_id:19, properties:{genero:"Indie rock", nome:"The Smiths"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Artista;
+UNWIND [{_id:0, properties:{idade:30, cidade:"Fortaleza", nome:"Caio", plano:"Premium"}}, {_id:1, properties:{idade:28, cidade:"Recife", nome:"Jorge", plano:"Gratuito"}}, {_id:2, properties:{idade:25, cidade:"São Paulo", nome:"Lucas", plano:"Premium"}}, {_id:3, properties:{idade:32, cidade:"Fortaleza", nome:"Gabriel", plano:"Gratuito"}}, {_id:4, properties:{idade:27, cidade:"Curitiba", nome:"Ethan", plano:"Premium"}}, {_id:5, properties:{idade:29, cidade:"Belo Horizonte", nome:"Chrono", plano:"Gratuito"}}, {_id:6, properties:{idade:35, cidade:"Salvador", nome:"Tiburcio", plano:"Premium"}}, {_id:7, properties:{idade:24, cidade:"Recife", nome:"Jubileu", plano:"Gratuito"}}, {_id:8, properties:{idade:26, cidade:"Fortaleza", nome:"Mariana", plano:"Premium"}}, {_id:9, properties:{idade:31, cidade:"São Paulo", nome:"Felipinho", plano:"Gratuito"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Usuário;
+
+UNWIND [{_id:20, properties:{genero:"Glam rock", nome:"David Bowie"}}, {_id:21, properties:{genero:"Heavy metal", nome:"Black Sabbath"}}, {_id:22, properties:{genero:"Heavy metal", nome:"Iron Maiden"}}, {_id:23, properties:{genero:"Thrash metal", nome:"Metallica"}}, {_id:24, properties:{genero:"Eletrônica", nome:"Daft Punk"}}, {_id:25, properties:{genero:"Eletrônica", nome:"Kraftwerk"}}, {_id:26, properties:{genero:"MPB", nome:"Chico Buarque"}}, {_id:27, properties:{genero:"MPB", nome:"Caetano Veloso"}}, {_id:28, properties:{genero:"MPB", nome:"Milton Nascimento"}}, {_id:29, properties:{genero:"Bossa nova", nome:"Tom Jobim"}}, {_id:30, properties:{genero:"Rock brasileiro", nome:"Casa das Máquinas"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Artista;
+UNWIND [{_id:31, properties:{ano:1986, nome:"Tempo Perdido"}}, {_id:32, properties:{ano:1989, nome:"Pais e Filhos"}}, {_id:33, properties:{ano:1987, nome:"Faroeste Caboclo"}}, {_id:34, properties:{ano:1987, nome:"Infinita Highway"}}, {_id:35, properties:{ano:1990, nome:"O Papa é Pop"}}, {_id:36, properties:{ano:1986, nome:"Toda Forma de Poder"}}, {_id:37, properties:{ano:1973, nome:"Asa Branca"}}, {_id:38, properties:{ano:1991, nome:"Borbulhas de Amor"}}, {_id:39, properties:{ano:1976, nome:"Como Nossos Pais"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Música;
+
+UNWIND [{_id:56, properties:{nome:"Dois"}}, {_id:57, properties:{nome:"As Quatro Estações"}}, {_id:58, properties:{nome:"Que País É Este"}}, {_id:59, properties:{nome:"A Revolta dos Dândis"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Álbum;
+UNWIND [{_id:40, properties:{ano:1976, nome:"Apenas um Rapaz Latino-Americano"}}, {_id:41, properties:{ano:1971, nome:"Construção"}}, {_id:42, properties:{ano:1970, nome:"Apesar de Você"}}, {_id:43, properties:{ano:1968, nome:"Alegria, Alegria"}}, {_id:44, properties:{ano:1978, nome:"Sampa"}}, {_id:45, properties:{ano:1967, nome:"Travessia"}}, {_id:46, properties:{ano:1964, nome:"Garota de Ipanema"}}, {_id:47, properties:{ano:1968, nome:"Hey Jude"}}, {_id:48, properties:{ano:1969, nome:"Come Together"}}, {_id:49, properties:{ano:1979, nome:"Comfortably Numb"}}, {_id:50, properties:{ano:1975, nome:"Wish You Were Here"}}, {_id:51, properties:{ano:1993, nome:"Creep"}}, {_id:52, properties:{ano:1997, nome:"Karma Police"}}, {_id:53, properties:{ano:1987, nome:"Just Like Heaven"}}, {_id:54, properties:{ano:1980, nome:"Love Will Tear Us Apart"}}, {_id:55, properties:{ano:1986, nome:"Enjoy the Silence"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Música;
+
+UNWIND [{_id:60, properties:{nome:"O Papa é Pop"}}, {_id:61, properties:{nome:"Longe Demais das Capitais"}}, {_id:62, properties:{nome:"Manera Fru Fru, Manera"}}, {_id:63, properties:{nome:"Pedras que Cantam"}}, {_id:64, properties:{nome:"Alucinação"}}, {_id:65, properties:{nome:"Construção"}}, {_id:66, properties:{nome:"Apesar de Você"}}, {_id:67, properties:{nome:"Caetano Veloso"}}, {_id:68, properties:{nome:"Muito"}}, {_id:69, properties:{nome:"Travessia"}}, {_id:70, properties:{nome:"Getz/Gilberto"}}, {_id:71, properties:{nome:"Hey Jude"}}, {_id:72, properties:{nome:"Abbey Road"}}, {_id:73, properties:{nome:"The Wall"}}, {_id:74, properties:{nome:"Wish You Were Here"}}, {_id:75, properties:{nome:"Pablo Honey"}}, {_id:76, properties:{nome:"OK Computer"}}, {_id:77, properties:{nome:"Kiss Me Kiss Me Kiss Me"}}, {_id:78, properties:{nome:"Closer"}}, {_id:79, properties:{nome:"The Queen Is Dead"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Álbum;
+
+UNWIND [{_id:80, properties:{nome:"Rock brasileiro"}}, {_id:81, properties:{nome:"MPB"}}, {_id:82, properties:{nome:"Tropicália"}}, {_id:83, properties:{nome:"Bossa nova"}}, {_id:84, properties:{nome:"Rock"}}, {_id:85, properties:{nome:"Rock progressivo"}}, {_id:86, properties:{nome:"Rock alternativo"}}, {_id:87, properties:{nome:"Post-punk"}}] AS row
+CREATE (n:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row._id}) SET n += row.properties SET n:Gênero;
+UNWIND [{start: {_id:0}, end: {_id:31}, properties:{nota:10}}, {start: {_id:0}, end: {_id:41}, properties:{nota:9}}, {start: {_id:0}, end: {_id:49}, properties:{nota:10}}, {start: {_id:0}, end: {_id:51}, properties:{nota:8}}, {start: {_id:1}, end: {_id:47}, properties:{nota:9}}, {start: {_id:1}, end: {_id:48}, properties:{nota:8}}, {start: {_id:1}, end: {_id:50}, properties:{nota:10}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:AVALIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:0}, end: {_id:13}, properties:{}}, {start: {_id:0}, end: {_id:16}, properties:{}}, {start: {_id:0}, end: {_id:21}, properties:{}}, {start: {_id:1}, end: {_id:10}, properties:{}}, {start: {_id:1}, end: {_id:14}, properties:{}}, {start: {_id:1}, end: {_id:15}, properties:{}}, {start: {_id:1}, end: {_id:20}, properties:{}}, {start: {_id:1}, end: {_id:26}, properties:{}}, {start: {_id:1}, end: {_id:29}, properties:{}}, {start: {_id:2}, end: {_id:11}, properties:{}}, {start: {_id:2}, end: {_id:14}, properties:{}}, {start: {_id:2}, end: {_id:21}, properties:{}}, {start: {_id:2}, end: {_id:22}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GOSTA_DE]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:2}, end: {_id:51}, properties:{nota:7}}, {start: {_id:2}, end: {_id:52}, properties:{nota:10}}, {start: {_id:2}, end: {_id:53}, properties:{nota:9}}, {start: {_id:3}, end: {_id:31}, properties:{nota:9}}, {start: {_id:3}, end: {_id:34}, properties:{nota:10}}, {start: {_id:3}, end: {_id:35}, properties:{nota:8}}, {start: {_id:4}, end: {_id:47}, properties:{nota:8}}, {start: {_id:4}, end: {_id:54}, properties:{nota:10}}, {start: {_id:4}, end: {_id:55}, properties:{nota:9}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:AVALIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:2}, end: {_id:23}, properties:{}}, {start: {_id:2}, end: {_id:24}, properties:{}}, {start: {_id:2}, end: {_id:25}, properties:{}}, {start: {_id:2}, end: {_id:30}, properties:{}}, {start: {_id:3}, end: {_id:12}, properties:{}}, {start: {_id:3}, end: {_id:17}, properties:{}}, {start: {_id:3}, end: {_id:18}, properties:{}}, {start: {_id:3}, end: {_id:19}, properties:{}}, {start: {_id:4}, end: {_id:17}, properties:{}}, {start: {_id:5}, end: {_id:15}, properties:{}}, {start: {_id:5}, end: {_id:16}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GOSTA_DE]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:5}, end: {_id:32}, properties:{nota:9}}, {start: {_id:5}, end: {_id:44}, properties:{nota:8}}, {start: {_id:5}, end: {_id:45}, properties:{nota:10}}, {start: {_id:6}, end: {_id:33}, properties:{nota:10}}, {start: {_id:6}, end: {_id:37}, properties:{nota:8}}, {start: {_id:6}, end: {_id:39}, properties:{nota:9}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:AVALIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:5}, end: {_id:19}, properties:{}}, {start: {_id:5}, end: {_id:20}, properties:{}}, {start: {_id:5}, end: {_id:27}, properties:{}}, {start: {_id:5}, end: {_id:28}, properties:{}}, {start: {_id:5}, end: {_id:29}, properties:{}}, {start: {_id:6}, end: {_id:12}, properties:{}}, {start: {_id:6}, end: {_id:13}, properties:{}}, {start: {_id:6}, end: {_id:14}, properties:{}}, {start: {_id:6}, end: {_id:21}, properties:{}}, {start: {_id:6}, end: {_id:22}, properties:{}}, {start: {_id:6}, end: {_id:23}, properties:{}}, {start: {_id:7}, end: {_id:10}, properties:{}}, {start: {_id:7}, end: {_id:11}, properties:{}}, {start: {_id:7}, end: {_id:26}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GOSTA_DE]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:7}, end: {_id:38}, properties:{nota:9}}, {start: {_id:7}, end: {_id:41}, properties:{nota:10}}, {start: {_id:7}, end: {_id:43}, properties:{nota:8}}, {start: {_id:8}, end: {_id:50}, properties:{nota:9}}, {start: {_id:8}, end: {_id:52}, properties:{nota:8}}, {start: {_id:8}, end: {_id:53}, properties:{nota:10}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:AVALIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:8}, end: {_id:12}, properties:{}}, {start: {_id:8}, end: {_id:16}, properties:{}}, {start: {_id:8}, end: {_id:17}, properties:{}}, {start: {_id:8}, end: {_id:18}, properties:{}}, {start: {_id:8}, end: {_id:19}, properties:{}}, {start: {_id:8}, end: {_id:20}, properties:{}}, {start: {_id:8}, end: {_id:24}, properties:{}}, {start: {_id:8}, end: {_id:25}, properties:{}}, {start: {_id:8}, end: {_id:30}, properties:{}}, {start: {_id:9}, end: {_id:10}, properties:{}}, {start: {_id:9}, end: {_id:14}, properties:{}}, {start: {_id:9}, end: {_id:15}, properties:{}}, {start: {_id:9}, end: {_id:27}, properties:{}}, {start: {_id:9}, end: {_id:28}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GOSTA_DE]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:11}, end: {_id:10}, properties:{}}, {start: {_id:12}, end: {_id:13}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:INFLUENCIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:9}, end: {_id:34}, properties:{nota:8}}, {start: {_id:9}, end: {_id:48}, properties:{nota:10}}, {start: {_id:9}, end: {_id:49}, properties:{nota:9}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:AVALIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:10}, end: {_id:62}, properties:{}}, {start: {_id:10}, end: {_id:63}, properties:{}}, {start: {_id:11}, end: {_id:64}, properties:{}}, {start: {_id:12}, end: {_id:56}, properties:{}}, {start: {_id:12}, end: {_id:57}, properties:{}}, {start: {_id:12}, end: {_id:58}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:LANÇOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:10}, end: {_id:37}, properties:{}}, {start: {_id:10}, end: {_id:38}, properties:{}}, {start: {_id:11}, end: {_id:39}, properties:{}}, {start: {_id:11}, end: {_id:40}, properties:{}}, {start: {_id:12}, end: {_id:31}, properties:{}}, {start: {_id:12}, end: {_id:32}, properties:{}}, {start: {_id:12}, end: {_id:33}, properties:{}}, {start: {_id:13}, end: {_id:34}, properties:{}}, {start: {_id:13}, end: {_id:35}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GRAVOU]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:14}, end: {_id:16}, properties:{}}, {start: {_id:15}, end: {_id:16}, properties:{}}, {start: {_id:15}, end: {_id:20}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:INFLUENCIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:13}, end: {_id:59}, properties:{}}, {start: {_id:13}, end: {_id:60}, properties:{}}, {start: {_id:13}, end: {_id:61}, properties:{}}, {start: {_id:14}, end: {_id:73}, properties:{}}, {start: {_id:14}, end: {_id:74}, properties:{}}, {start: {_id:15}, end: {_id:71}, properties:{}}, {start: {_id:15}, end: {_id:72}, properties:{}}, {start: {_id:16}, end: {_id:75}, properties:{}}, {start: {_id:16}, end: {_id:76}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:LANÇOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:13}, end: {_id:36}, properties:{}}, {start: {_id:14}, end: {_id:49}, properties:{}}, {start: {_id:14}, end: {_id:50}, properties:{}}, {start: {_id:15}, end: {_id:47}, properties:{}}, {start: {_id:15}, end: {_id:48}, properties:{}}, {start: {_id:16}, end: {_id:51}, properties:{}}, {start: {_id:16}, end: {_id:52}, properties:{}}, {start: {_id:17}, end: {_id:53}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GRAVOU]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:17}, end: {_id:16}, properties:{}}, {start: {_id:18}, end: {_id:17}, properties:{}}, {start: {_id:20}, end: {_id:16}, properties:{}}, {start: {_id:20}, end: {_id:17}, properties:{}}, {start: {_id:21}, end: {_id:22}, properties:{}}, {start: {_id:22}, end: {_id:23}, properties:{}}, {start: {_id:25}, end: {_id:24}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:INFLUENCIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:17}, end: {_id:77}, properties:{}}, {start: {_id:18}, end: {_id:78}, properties:{}}, {start: {_id:19}, end: {_id:79}, properties:{}}, {start: {_id:26}, end: {_id:65}, properties:{}}, {start: {_id:26}, end: {_id:66}, properties:{}}, {start: {_id:27}, end: {_id:67}, properties:{}}, {start: {_id:27}, end: {_id:68}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:LANÇOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:18}, end: {_id:54}, properties:{}}, {start: {_id:19}, end: {_id:55}, properties:{}}, {start: {_id:26}, end: {_id:41}, properties:{}}, {start: {_id:26}, end: {_id:42}, properties:{}}, {start: {_id:27}, end: {_id:43}, properties:{}}, {start: {_id:27}, end: {_id:44}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GRAVOU]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:31}, end: {_id:80}, properties:{}}, {start: {_id:32}, end: {_id:80}, properties:{}}, {start: {_id:33}, end: {_id:80}, properties:{}}, {start: {_id:34}, end: {_id:80}, properties:{}}, {start: {_id:35}, end: {_id:80}, properties:{}}, {start: {_id:36}, end: {_id:80}, properties:{}}, {start: {_id:37}, end: {_id:81}, properties:{}}, {start: {_id:38}, end: {_id:81}, properties:{}}, {start: {_id:39}, end: {_id:81}, properties:{}}, {start: {_id:40}, end: {_id:81}, properties:{}}, {start: {_id:41}, end: {_id:81}, properties:{}}, {start: {_id:42}, end: {_id:81}, properties:{}}, {start: {_id:43}, end: {_id:82}, properties:{}}, {start: {_id:44}, end: {_id:81}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:CLASSIFICADA_COMO]->(end) SET r += row.properties;
+UNWIND [{start: {_id:27}, end: {_id:26}, properties:{}}, {start: {_id:29}, end: {_id:28}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:INFLUENCIOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:28}, end: {_id:69}, properties:{}}, {start: {_id:29}, end: {_id:70}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:LANÇOU]->(end) SET r += row.properties;
+UNWIND [{start: {_id:28}, end: {_id:45}, properties:{}}, {start: {_id:29}, end: {_id:46}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:GRAVOU]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:45}, end: {_id:81}, properties:{}}, {start: {_id:46}, end: {_id:83}, properties:{}}, {start: {_id:47}, end: {_id:84}, properties:{}}, {start: {_id:48}, end: {_id:84}, properties:{}}, {start: {_id:49}, end: {_id:85}, properties:{}}, {start: {_id:50}, end: {_id:85}, properties:{}}, {start: {_id:51}, end: {_id:86}, properties:{}}, {start: {_id:52}, end: {_id:86}, properties:{}}, {start: {_id:53}, end: {_id:86}, properties:{}}, {start: {_id:54}, end: {_id:87}, properties:{}}, {start: {_id:55}, end: {_id:86}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:CLASSIFICADA_COMO]->(end) SET r += row.properties;
+UNWIND [{start: {_id:56}, end: {_id:31}, properties:{}}, {start: {_id:57}, end: {_id:32}, properties:{}}, {start: {_id:58}, end: {_id:33}, properties:{}}, {start: {_id:59}, end: {_id:34}, properties:{}}, {start: {_id:60}, end: {_id:35}, properties:{}}, {start: {_id:61}, end: {_id:36}, properties:{}}, {start: {_id:62}, end: {_id:37}, properties:{}}, {start: {_id:63}, end: {_id:38}, properties:{}}, {start: {_id:64}, end: {_id:39}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:CONTÉM]->(end) SET r += row.properties;
+
+UNWIND [{start: {_id:64}, end: {_id:40}, properties:{}}, {start: {_id:65}, end: {_id:41}, properties:{}}, {start: {_id:66}, end: {_id:42}, properties:{}}, {start: {_id:67}, end: {_id:43}, properties:{}}, {start: {_id:68}, end: {_id:44}, properties:{}}, {start: {_id:69}, end: {_id:45}, properties:{}}, {start: {_id:70}, end: {_id:46}, properties:{}}, {start: {_id:71}, end: {_id:47}, properties:{}}, {start: {_id:72}, end: {_id:48}, properties:{}}, {start: {_id:73}, end: {_id:49}, properties:{}}, {start: {_id:74}, end: {_id:50}, properties:{}}, {start: {_id:75}, end: {_id:51}, properties:{}}, {start: {_id:76}, end: {_id:52}, properties:{}}, {start: {_id:77}, end: {_id:53}, properties:{}}, {start: {_id:78}, end: {_id:54}, properties:{}}, {start: {_id:79}, end: {_id:55}, properties:{}}] AS row
+MATCH (start:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.start._id})
+MATCH (end:`UNIQUE IMPORT LABEL`{`UNIQUE IMPORT ID`: row.end._id})
+CREATE (start)-[r:CONTÉM]->(end) SET r += row.properties;
+
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+MATCH (n:`UNIQUE IMPORT LABEL`)  WITH n LIMIT 20 REMOVE n:`UNIQUE IMPORT LABEL` REMOVE n.`UNIQUE IMPORT ID`;
+DROP CONSTRAINT UNIQUE_IMPORT_NAME;
+
